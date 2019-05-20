@@ -1,6 +1,9 @@
 ﻿{
   "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
   "Version": "15.0.30311.775",
+  "GettingStartedDocument": {
+    "Uri": "https://go.microsoft.com/fwlink/?linkid=858517"
+  },
   "ExtendedData": {
     "inputs": [
       "http://localhost:2001/Master_Service.svc"

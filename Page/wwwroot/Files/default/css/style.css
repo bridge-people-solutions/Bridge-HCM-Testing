@@ -369,7 +369,7 @@ code {
   padding: 35px 40px;
 }
 .page-header .page-block .breadcrumb {
-  float: right;
+  /*float: right;*/
   background: transparent;
   margin-bottom: 0;
   padding: 0;
@@ -5020,27 +5020,133 @@ a[data-toggle="lightbox"] .img-fluid {
   margin-bottom: 15px;
 }
 
+/* Group Buttons */
+
+.ui-group-buttons .or {
+    position: relative;
+    float: left;
+    width: .3em;
+    height: 1.3em;
+    z-index: 3;
+    font-size: 12px
+}
+
+    .ui-group-buttons .or:before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: '';
+        background-color: #5a5a5a;
+        margin-top: -.1em;
+        margin-left: -.9em;
+        width: 1.8em;
+        height: 1.8em;
+        line-height: 1.55;
+        color: #fff;
+        font-style: normal;
+        font-weight: 400;
+        text-align: center;
+        border-radius: 500px;
+        -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+        box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    .ui-group-buttons .or:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: ' ';
+        width: .3em;
+        height: 2.84em;
+        background-color: rgba(0,0,0,0);
+        border-top: .6em solid #5a5a5a;
+        border-bottom: .6em solid #5a5a5a
+    }
+
+    .ui-group-buttons .or.or-lg {
+        height: 1.3em;
+        font-size: 16px
+    }
+
+        .ui-group-buttons .or.or-lg:after {
+            height: 2.85em
+        }
+
+    .ui-group-buttons .or.or-sm {
+        height: 1em
+    }
+
+        .ui-group-buttons .or.or-sm:after {
+            height: 2.5em
+        }
+
+    .ui-group-buttons .or.or-xs {
+        height: .25em
+    }
+
+        .ui-group-buttons .or.or-xs:after {
+            height: 1.84em;
+            z-index: -1000
+        }
+
+.ui-group-buttons {
+    display: inline-block;
+    vertical-align: middle
+}
+
+    .ui-group-buttons:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden
+    }
+
+    .ui-group-buttons .btn {
+        float: left;
+        border-radius: 0
+    }
+
+        .ui-group-buttons .btn:first-child {
+            margin-left: 0;
+            border-top-left-radius: .25em;
+            border-bottom-left-radius: .25em;
+            padding-right: 15px
+        }
+
+        .ui-group-buttons .btn:last-child {
+            border-top-right-radius: .25em;
+            border-bottom-right-radius: .25em;
+            padding-left: 15px
+        }
+
+
 /**  =====================
       Theme-preloader css start
 ==========================  **/
 .theme-loader {
-  height: 100%;
-  width: 100%;
-  background: #fff;
-  position: fixed;
-  z-index: 999999;
-  top: 0;
-  left: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
 }
-.theme-loader .loader-track {
-  left: 50%;
-  top: 50%;
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin: -25px 0 0 -25px;
-}
+
+    .theme-loader .loader-track {
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: -25px 0 0 -25px;
+    }
 
 .preloader-wrapper {
   display: inline-block;
@@ -5050,6 +5156,7 @@ a[data-toggle="lightbox"] .img-fluid {
   -webkit-animation: container-rotate 1568ms linear infinite;
           animation: container-rotate 1568ms linear infinite;
 }
+
 
 @-webkit-keyframes container-rotate {
   to {
@@ -12301,11 +12408,11 @@ body.menu-bottom #collapse-menu {
   color: #fff;
   height: auto;
 }
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-  background-color: #448aff;
-  color: #fff;
-  padding: 8px 30px 8px 20px;
-}
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        background-color: #455a64;
+        color: #fff;
+        padding: 4px 15px 4px 10px;
+    }
 .select2-container--default .select2-selection--single .select2-selection__arrow {
   top: 10px;
   right: 15px;
@@ -21749,3 +21856,143 @@ span.value {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+/** {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+}*/
+
+.breadcrumb-body {
+    text-align: center;
+    padding-top: 100px;
+    /*background: #689976;
+    background: linear-gradient(#689976, #acdacc);*/
+    font-family: "Merriweather Sans", arial, verdana;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumb-step {
+    /*centering*/
+    display: inline-block;
+    /*box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.35);*/
+    overflow: hidden;
+    border-radius: 5px;
+    /*Lets add the numbers for each link using CSS counters. flag is the name of the counter. to be defined using counter-reset in the parent element of the links*/
+    counter-reset: flag;
+}
+
+    .breadcrumb-step a {
+        text-decoration: none;
+        outline: none;
+        display: block;
+        float: left;
+        font-size: 12px;
+        line-height: 36px;
+        color: white;
+        /*need more margin on the left of links to accomodate the numbers*/
+        padding: 0 10px 0 60px;
+        background: #666;
+        background: linear-gradient(#666, #333);
+        position: relative;
+    }
+        /*since the first link does not have a triangle before it we can reduce the left padding to make it look consistent with other links*/
+        .breadcrumb-step a:first-child {
+            padding-left: 46px;
+            border-radius: 5px 0 0 5px; /*to match with the parent's radius*/
+        }
+
+            .breadcrumb-step a:first-child:before {
+                left: 14px;
+            }
+
+        .breadcrumb-step a:last-child {
+            border-radius: 0 5px 5px 0; /*this was to prevent glitches on hover*/
+            padding-right: 20px;
+        }
+
+        /*hover/active styles*/
+        .breadcrumb-step a.active {
+            background: #333;
+            background: linear-gradient(#333, #000);
+        }
+
+            .breadcrumb-step a.active:after{
+                background: #333;
+                background: linear-gradient(135deg, #333, #000);
+            }
+
+        /*adding the arrows for the breadcrumbs using rotated pseudo elements*/
+        .breadcrumb-step a:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -18px; /*half of square's length*/
+            /*same dimension as the line-height of .breadcrumb a */
+            width: 36px;
+            height: 36px;
+            /*as you see the rotated square takes a larger height. which makes it tough to position it properly. So we are going to scale it down so that the diagonals become equal to the line-height of the link. We scale it to 70.7% because if square's: 
+	length = 1; diagonal = (1^2 + 1^2)^0.5 = 1.414 (pythagoras theorem)
+	if diagonal required = 1; length = 1/1.414 = 0.707*/
+            transform: scale(0.707) rotate(45deg);
+            /*we need to prevent the arrows from getting buried under the next link*/
+            z-index: 1;
+            /*background same as links but the gradient will be rotated to compensate with the transform applied*/
+            background: #666;
+            background: linear-gradient(135deg, #666, #333);
+            /*stylish arrow design using box shadow*/
+            box-shadow: 2px -2px 0 2px rgba(0, 0, 0, 0.4), 3px -3px 0 2px rgba(255, 255, 255, 0.1);
+            /*
+		5px - for rounded arrows and 
+		50px - to prevent hover glitches on the border created using shadows*/
+            border-radius: 0 5px 0 50px;
+        }
+        /*we dont need an arrow after the last link*/
+        .breadcrumb-step a:last-child:after {
+            content: none;
+        }
+        /*we will use the :before element to show numbers*/
+        .breadcrumb-step a:before {
+            content: counter(flag);
+            counter-increment: flag;
+            /*some styles now*/
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            margin: 8px 0;
+            position: absolute;
+            top: 0;
+            left: 30px;
+            background: #444;
+            background: linear-gradient(#444, #222);
+            font-weight: bold;
+        }
+
+.flat a,
+.flat a:after {
+    background: white;
+    color: black;
+    transition: all 0.5s;
+}
+
+    .flat a:before {
+        background: white;
+        box-shadow: 0 0 0 1px #ccc;
+    }
+
+    .flat a:hover,
+    .flat a.active,
+    .flat a:hover:after,
+    .flat a.active:after {
+        background: #9eeb62;
+    }

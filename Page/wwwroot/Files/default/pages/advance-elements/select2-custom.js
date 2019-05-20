@@ -1,6 +1,7 @@
 "use strict";
 $(document).ready(function(){
 	// Single Search Select
+   
     $(".js-example-basic-single").select2();
     $(".js-example-disabled-results").select2();
     // Multi Select
